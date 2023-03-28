@@ -130,7 +130,7 @@ function init(){
     }else if(calcString === '='){
         const paraContent = document.createTextNode(`${calcStore} = ${buffer}`);
         para.appendChild(paraContent);
-        history.append(para);
+        history.insertBefore(para, history.firstChild);
         calcStore = '';
     }else{
         //console.log(calcStore);
